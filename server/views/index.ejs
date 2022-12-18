@@ -8,6 +8,8 @@
   </head>
   <body>
     <form
+      action="/upload" "/* Basically an url to which we send, Without this the file goes to the url, instead we want to send it to backend */"
+      method="post" // It can be anything get pull post | Here we use post because we need to post the information to server
       style="
         display: grid;
         gap: 0.5rem;
@@ -15,8 +17,10 @@
         max-width: 500px;
         margin: 0 auto;
       "
+      enctype="multipart/form-data" // We are using this to specify the form that we are sending a file
+      // Specifies we are sending across a multi part form and that it sends in pieces and the reason it is multi part is because we are sending a file which has multiple parts. Cant send all parts at once coz it will be very large
     >
-      <label for="file">File:</label>
+      <label for="file">File:</label> 
       <input type="file" id="file" name="file" required />
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" />

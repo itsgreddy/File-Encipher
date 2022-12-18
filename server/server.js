@@ -11,4 +11,8 @@ app.get("/", (req, res) => { // Giving it a function which has a request and res
     res.render("index") // Index view
 })
 
+app.post("/upload", (req, res) => { // We need to listen to a post request to "/upload" url
+    res.send("Lockdown Baby!")
+})
+
 app.listen(3000) // To start our app | Listening on port 3000
